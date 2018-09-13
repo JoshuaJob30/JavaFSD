@@ -1,0 +1,85 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<section id="section1">
+		  <br>	
+		  <h2 style="display:inline;">Awesome Online Videos <img src="C:/Users/welcome/Desktop/HTML5/images.jpeg" alt="Video Logo"></h2>
+			  <table>
+				<tr><td>Background Color: </td> 
+				<td>
+					<select id="select1" onchange="validate()">
+						<option value="Select">Select</option>
+						<option value="red">red</option>
+						<option value="green">green</option>
+						<option value="yellow">yellow</option>
+					</select>
+				</td></tr>
+			  </table>
+		  	<script> 
+			function validate()
+			{
+					var sel = document.getElementById("select1"); 
+					var sec = document.getElementById("section1");
+					if(sel.options[sel.selectedIndex].text=="red")
+						sec.style.backgroundColor = "red";
+					else if(sel.options[sel.selectedIndex].text=="green")
+						sec.style.backgroundColor = "green";
+					else if(sel.options[sel.selectedIndex].text=="yellow")
+						sec.style.backgroundColor = "yellow";
+					else if(sel.options[sel.selectedIndex].text=="Select")
+						sec.style.backgroundColor = "white";
+			}		
+			</script> 
+		</section>
+		<hr />
+		<section id="section2">
+		  <h1>Video of the Week</h1>
+		  <video id="weekVideo" width="400" height="240" class='center'>
+			  <source src="C:/Users/welcome/Desktop/HTML5/SampleVideo.mp4" type="video/mp4">
+			  Your browser does not support the video tag.
+		  </video>
+		  <table>
+			<tr><td><button onclick="playVid()" type="button">Play Video</button></td> <td><button onclick="pauseVid()" type="button">Pause Video</button></td></tr>
+		  </table>
+		  <form name="form1" method="post" onClick="return validate1()">
+			  <table>
+				<tr><td>Background Color: </td> 
+				<td>
+					<select id="select2" onchange="validate1()">
+						<option value="Select">Select</option>
+						<option value="red">red</option>
+						<option value="green">green</option>
+						<option value="yellow">yellow</option>
+					</select>
+				</td></tr>
+			  </table>
+		  </form>
+
+		  	<script> 
+			var vid = document.getElementById("weekVideo"); 
+
+			function playVid() { 
+				vid.play(); 
+			} 
+
+			function pauseVid() { 
+				vid.pause(); 
+			} 
+			function validate1()
+			{
+					var sel = document.getElementById("select2"); 
+					var sec = document.getElementById("section2");
+					if(sel.options[sel.selectedIndex].text=="red")
+						sec.style.backgroundColor = "red";
+					else if(sel.options[sel.selectedIndex].text=="green")
+						sec.style.backgroundColor = "green";
+					else if(sel.options[sel.selectedIndex].text=="yellow")
+						sec.style.backgroundColor = "yellow";
+					else if(sel.options[sel.selectedIndex].text=="Select")
+						sec.style.backgroundColor = "white";
+			}		
+			</script> 
+		  </section> 
+	</body>
+</html>
